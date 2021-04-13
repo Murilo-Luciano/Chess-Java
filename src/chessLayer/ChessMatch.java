@@ -1,7 +1,6 @@
 package chessLayer;
 
 import boardLayer.Board;
-import boardLayer.Position;
 import chessLayer.pieces.King;
 import chessLayer.pieces.Rook;
 
@@ -24,10 +23,14 @@ public class ChessMatch {
 		return mat;
 	}
 	
+	private void placeNewPiece(char column, int row, ChessPiece piece) {
+		board.placePiece(piece, new ChessPosition(column, row).toPosition());
+	}
+	
 	public void initialSetup() {
-		board.placePiece(new Rook(board, Color.WHITE), new Position(7, 0));//wRook initial position
-		board.placePiece(new King(board, Color.BLACK), new Position(0, 4));//bKing initial position
-		board.placePiece(new King(board, Color.WHITE), new Position(7, 4));//wKing initial position
+		placeNewPiece('b', 6, new Rook(board, Color.WHITE));//wRook initial position
+		placeNewPiece('e', 8, new King(board, Color.BLACK));//bKing initial position
+		placeNewPiece('e', 1, new King(board, Color.WHITE));//wKing initial position
 	}
 
 }
