@@ -1,7 +1,7 @@
 # About
 This is a Chess Project from [Mr.Nelio Alves](https://github.com/acenelio) [Java course](https://www.udemy.com/course/java-curso-completo/)
 ## How to run
-The chess games is runned on the Git Bash
+The chess games is better runs on the Git Bash
 ```bash
 $ java application/Program
 ```
